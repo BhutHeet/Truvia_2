@@ -1,0 +1,74 @@
+import { useEffect, useState, useRef } from "react";
+
+const stats = [
+  { value: 2500, suffix: "+", label: "Happy Clients" },
+  { value: 20, suffix: "+", label: "Years Experience" },
+  { value: 100, suffix: "+", label: "Products" },
+  { value: 100, suffix: "%", label: "Quality Products" },
+];
+
+const StatsSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [counts, setCounts] = useState(stats.map(() => 0));
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const stepDuration = duration / steps;
+
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+      
+      setCounts(stats.map((stat) => Math.floor(stat.value * Math.min(progress, 1))));
+
+      if (currentStep >= steps) {
+        clearInterval(timer);
+      }
+    }, stepDuration);
+
+    return () => clearInterval(timer);
+  }, [isVisible]);
+
+  return (
+    <section ref={sectionRef} className="py-16 hero-gradient">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center text-white">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+                {counts[index]}
+                <span className="text-secondary">{stat.suffix}</span>
+              </div>
+              <p className="text-white/80 font-medium">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default StatsSection;
