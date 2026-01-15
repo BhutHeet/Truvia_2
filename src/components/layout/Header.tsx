@@ -1,0 +1,108 @@
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Products", path: "/products" },
+  { name: "Contact Us", path: "/contact" },
+];
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  return (
+    <header className="sticky top-0 z-50 bg-background shadow-sm">
+      {/* Top Bar */}
+      <div className="bg-primary text-primary-foreground py-2">
+        <div className="container mx-auto px-4 flex flex-wrap items-center justify-between text-sm">
+          <span className="font-semibold">AN ISO 9001 : 2015 CERTIFIED COMPANY</span>
+          <div className="flex items-center gap-6">
+            <a href="tel:+916353329493" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <Phone className="w-4 h-4" />
+              +91-6353329493
+            </a>
+            <a href="mailto:info@truviapolyplast.com" className="hidden sm:flex items-center gap-2 hover:text-secondary transition-colors">
+              <Mail className="w-4 h-4" />
+              info@truviapolyplast.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
+              TP
+            </div>
+            <div>
+              <h1 className="text-xl font-bold text-primary">Truvia Polyplast</h1>
+              <p className="text-xs text-muted-foreground">Quality You Can Trust</p>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`font-medium transition-colors hover:text-primary ${
+                  location.pathname === link.path
+                    ? "text-primary"
+                    : "text-foreground"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+              Download Catalogue
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 py-4 border-t">
+            <div className="flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`font-medium transition-colors hover:text-primary ${
+                    location.pathname === link.path
+                      ? "text-primary"
+                      : "text-foreground"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground w-full">
+                Download Catalogue
+              </Button>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
