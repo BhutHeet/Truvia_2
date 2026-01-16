@@ -28,7 +28,7 @@ const TopCategories = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-primary">Top Categories</h2>
+        <h2 className="section-title text-primary">Our Products</h2>
         <p className="section-subtitle">
           Explore our wide range of premium quality products designed for 
           durability and performance.
