@@ -45,8 +45,17 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-              Download Catalogue
+            <Button
+              asChild
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+            >
+              <a
+                href="/catalogue.pdf"
+                download="Truvia-Polyplast-Catalogue.pdf"
+                aria-label="Download product catalogue"
+              >
+                Download Catalogue
+              </a>
             </Button>
           </div>
 
@@ -77,8 +86,17 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground w-full">
-                Download Catalogue
+              <Button
+                asChild
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground w-full"
+              >
+                <a
+                  href="/catalogue.pdf"
+                  download="Truvia-Polyplast-Catalogue.pdf"
+                  aria-label="Download product catalogue"
+                >
+                  Download Catalogue
+                </a>
               </Button>
             </div>
           </div>
