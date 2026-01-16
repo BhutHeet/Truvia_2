@@ -16,22 +16,6 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background shadow-sm">
-      {/* Top Bar */}
-      <div className="bg-primary text-primary-foreground py-2">
-        <div className="container mx-auto px-4 flex flex-wrap items-center justify-end text-sm">
-          <div className="flex items-center gap-6">
-            <a href="tel:+916353329493" className="flex items-center gap-2 hover:text-secondary transition-colors">
-              <Phone className="w-4 h-4" />
-              +91-6353329493
-            </a>
-            <a href="mailto:info@truviapolyplast.com" className="hidden sm:flex items-center gap-2 hover:text-secondary transition-colors">
-              <Mail className="w-4 h-4" />
-              info@truviapolyplast.com
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
