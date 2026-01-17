@@ -1,32 +1,38 @@
-import { useState } from "react";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
-import { toast } from "sonner";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+
+const contactCards = [
+  {
+    icon: Phone,
+    title: "Call Us",
+    content: "+91-6353329493",
+    link: "tel:+916353329493",
+    gradient: "from-primary to-secondary",
+  },
+  {
+    icon: Mail,
+    title: "Email",
+    content: "info@truviapolyplast.com",
+    link: "mailto:info@truviapolyplast.com",
+    gradient: "from-secondary to-accent",
+  },
+  {
+    icon: MapPin,
+    title: "Factory Address",
+    content: "Godown no. 13, Vandemantaram-3, Singarava Road, Opp. VR Estate, Kathwada, Ahmedabad, Gujarat 382430",
+    link: null,
+    gradient: "from-accent to-primary",
+  },
+  {
+    icon: Clock,
+    title: "Working Hours",
+    content: "Mon – Sat: 9:00 AM – 6:00 PM",
+    link: null,
+    gradient: "from-primary via-secondary to-accent",
+  },
+];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Thank you for your message! We will get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -39,167 +45,79 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20">
+      {/* Contact Cards Section */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Contact Info */}
-            <div className="lg:col-span-1">
-              <h2 className="text-2xl font-bold text-primary mb-6">Get In Touch</h2>
-              <p className="text-muted-foreground mb-8">
-                We're here to help and answer any question you might have. 
-                We look forward to hearing from you.
-              </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Get In Touch</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              We're here to help and answer any question you might have. 
+              We look forward to hearing from you.
+            </p>
+          </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-primary" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactCards.map((card, index) => (
+              <div
+                key={index}
+                className="group relative bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border/50 hover:border-primary/30"
+              >
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                
+                {/* Icon container with animated gradient border */}
+                <div className="relative mb-6">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${card.gradient} p-[2px] group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="w-full h-full rounded-2xl bg-card flex items-center justify-center">
+                      <card.icon className="w-7 h-7 text-primary group-hover:text-secondary transition-colors duration-300" />
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Phone</h3>
-                    <a
-                      href="tel:+916353329493"
-                      className="text-muted-foreground hover:text-primary"
-                    >
-                      +91-6353329493
-                    </a>
-                  </div>
+                  
+                  {/* Decorative circle */}
+                  <div className={`absolute -top-2 -right-2 w-8 h-8 rounded-full bg-gradient-to-br ${card.gradient} opacity-20 blur-sm group-hover:opacity-40 transition-opacity duration-300`} />
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Email</h3>
-                    <a
-                      href="mailto:info@truviapolyplast.com"
-                      className="text-muted-foreground hover:text-primary"
-                    >
-                      info@truviapolyplast.com
-                    </a>
-                  </div>
-                </div>
+                {/* Content */}
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                  {card.title}
+                </h3>
+                
+                {card.link ? (
+                  <a
+                    href={card.link}
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300 block leading-relaxed"
+                  >
+                    {card.content}
+                  </a>
+                ) : (
+                  <p className="text-muted-foreground leading-relaxed">
+                    {card.content}
+                  </p>
+                )}
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Address</h3>
-                    <p className="text-muted-foreground">
-                      Gujarat, India
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Business Hours</h3>
-                    <p className="text-muted-foreground">
-                      Mon - Sat: 9:00 AM - 7:00 PM
-                    </p>
-                  </div>
-                </div>
+                {/* Bottom accent line */}
+                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${card.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
               </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-muted rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-primary mb-6">Send Us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Your Name *
-                      </label>
-                      <Input
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="John Doe"
-                        required
-                        className="bg-background"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Email Address *
-                      </label>
-                      <Input
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="john@example.com"
-                        required
-                        className="bg-background"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Phone Number
-                      </label>
-                      <Input
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+91 XXXXX XXXXX"
-                        className="bg-background"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Subject *
-                      </label>
-                      <Input
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        placeholder="Product Inquiry"
-                        required
-                        className="bg-background"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Message *
-                    </label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us about your requirements..."
-                      rows={6}
-                      required
-                      className="bg-background"
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full md:w-auto bg-primary hover:bg-primary/90">
-                    <Send className="mr-2 w-4 h-4" />
-                    Send Message
-                  </Button>
-                </form>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-[400px] bg-muted image-placeholder">
-        <p>Map Coming Soon</p>
+      {/* Decorative CTA Section */}
+      <section className="py-16 hero-gradient">
+        <div className="container mx-auto px-4 text-center text-white">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
+          <p className="text-white/80 max-w-xl mx-auto mb-6">
+            Contact us today and let's discuss how we can help you with premium quality PTMT products.
+          </p>
+          <a
+            href="tel:+916353329493"
+            className="inline-flex items-center gap-2 bg-white text-primary font-semibold px-8 py-3 rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
+            <Phone className="w-5 h-5" />
+            Call Now
+          </a>
+        </div>
       </section>
     </Layout>
   );
