@@ -35,7 +35,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-12 sm:py-16 md:py-20 bg-muted">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-primary">Why Choose Us</h2>
         <p className="section-subtitle">
@@ -43,17 +43,17 @@ const WhyChooseUs = () => {
           for durability, performance, and customer satisfaction.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-background rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition-shadow group"
+              className="bg-background rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 text-center shadow-sm hover:shadow-lg transition-shadow group"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
-                <feature.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 sm:mb-3 md:mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
+              <h3 className="font-semibold text-foreground mb-1 sm:mb-2 text-xs sm:text-sm md:text-base">{feature.title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground hidden sm:block">{feature.description}</p>
             </div>
           ))}
         </div>

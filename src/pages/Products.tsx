@@ -14,12 +14,12 @@ const Products = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="hero-gradient py-20 text-white">
+      <section className="hero-gradient py-12 sm:py-16 md:py-20 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4">
             {category ? category.name : "Our Products"}
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-xl text-white/80 max-w-2xl mx-auto px-4">
             {category
               ? category.description
               : "Explore our wide range of premium quality taps and fittings"}
@@ -28,19 +28,19 @@ const Products = () => {
       </section>
 
       {/* Breadcrumb */}
-      <div className="bg-muted py-4">
+      <div className="bg-muted py-3 sm:py-4">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm flex-wrap">
             <Link to="/" className="text-muted-foreground hover:text-primary">
               Home
             </Link>
-            <ChevronRight className="w-4 h-4 text-muted-foreground" />
+            <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground flex-shrink-0" />
             <Link to="/products" className="text-muted-foreground hover:text-primary">
               Products
             </Link>
             {category && (
               <>
-                <ChevronRight className="w-4 h-4 text-muted-foreground" />
+                <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground flex-shrink-0" />
                 <span className="text-primary font-medium">{category.name}</span>
               </>
             )}
@@ -50,12 +50,12 @@ const Products = () => {
 
       {/* Category Tabs (if no category selected) */}
       {!category && (
-        <section className="py-8 border-b">
+        <section className="py-4 sm:py-6 md:py-8 border-b">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               <Link
                 to="/products"
-                className="px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium"
+                className="px-4 sm:px-6 py-1.5 sm:py-2 rounded-full bg-primary text-primary-foreground font-medium text-xs sm:text-sm"
               >
                 All Products
               </Link>
@@ -63,7 +63,7 @@ const Products = () => {
                 <Link
                   key={cat.slug}
                   to={`/products/${cat.slug}`}
-                  className="px-6 py-2 rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
+                  className="px-4 sm:px-6 py-1.5 sm:py-2 rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors font-medium text-xs sm:text-sm"
                 >
                   {cat.name}
                 </Link>
@@ -74,9 +74,9 @@ const Products = () => {
       )}
 
       {/* Series Grid */}
-      <section className="py-12">
+      <section className="py-8 sm:py-10 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {displaySeries.map((series) => (
               <SeriesCard key={series.slug} series={series} />
             ))}

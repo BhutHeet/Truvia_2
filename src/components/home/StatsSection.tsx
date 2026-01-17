@@ -53,16 +53,16 @@ const StatsSection = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-16 hero-gradient">
+    <section ref={sectionRef} className="py-10 sm:py-12 md:py-16 hero-gradient">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center text-white">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2">
                 {counts[index]}
                 <span className="text-secondary">{stat.suffix}</span>
               </div>
-              <p className="text-white/80 font-medium">{stat.label}</p>
+              <p className="text-white/80 font-medium text-xs sm:text-sm md:text-base">{stat.label}</p>
             </div>
           ))}
         </div>
