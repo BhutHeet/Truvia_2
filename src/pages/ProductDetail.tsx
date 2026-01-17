@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { getProductById, getSeriesBySlug } from "@/data/products";
@@ -9,6 +10,11 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const product = productId ? getProductById(productId) : null;
   const series = product ? getSeriesBySlug(product.seriesSlug) : null;
+
+  // Scroll to top on mount
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [productId]);
 
   if (!product || !series) {
     return (

@@ -1,15 +1,21 @@
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SeriesCard from "@/components/products/SeriesCard";
-import { categories, getCategoryBySlug, getAllSeries } from "@/data/products";
+import CategoryCard from "@/components/products/CategoryCard";
+import { categories, getCategoryBySlug } from "@/data/products";
 import { ChevronRight } from "lucide-react";
 
 const Products = () => {
   const { categorySlug } = useParams();
 
+  // Scroll to top on mount
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [categorySlug]);
+
   // If category is specified, show series for that category
   const category = categorySlug ? getCategoryBySlug(categorySlug) : null;
-  const displaySeries = category ? category.series : getAllSeries();
 
   return (
     <Layout>
@@ -73,14 +79,22 @@ const Products = () => {
         </section>
       )}
 
-      {/* Series Grid */}
+      {/* Content Grid */}
       <section className="py-8 sm:py-10 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            {displaySeries.map((series) => (
-              <SeriesCard key={series.slug} series={series} />
-            ))}
-          </div>
+          {category ? (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+              {category.series.map((series) => (
+                <SeriesCard key={series.slug} series={series} />
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
+              {categories.map((cat) => (
+                <CategoryCard key={cat.slug} category={cat} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </Layout>
