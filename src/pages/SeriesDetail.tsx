@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import ProductCard from "@/components/products/ProductCard";
@@ -8,6 +9,11 @@ import { Button } from "@/components/ui/button";
 const SeriesDetail = () => {
   const { categorySlug, seriesSlug } = useParams();
   const series = seriesSlug ? getSeriesBySlug(seriesSlug) : null;
+
+  // Scroll to top on mount
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [seriesSlug]);
 
   if (!series) {
     return (

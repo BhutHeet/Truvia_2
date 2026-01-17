@@ -35,12 +35,9 @@ const SeriesCard = ({ series }: SeriesCardProps) => {
         <span className="text-xs text-secondary font-medium uppercase tracking-wider">
           {series.category}
         </span>
-        <h3 className="font-bold text-base sm:text-lg text-foreground mt-1 mb-1 sm:mb-2 group-hover:text-primary transition-colors line-clamp-1">
+        <h3 className="font-bold text-base sm:text-lg text-foreground mt-1 mb-2 group-hover:text-primary transition-colors line-clamp-1">
           {series.name}
         </h3>
-        <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3 line-clamp-2">
-          {series.description}
-        </p>
         {!isComingSoon && (
           <>
             <div className="flex items-center gap-2 text-primary text-xs sm:text-sm font-medium">
