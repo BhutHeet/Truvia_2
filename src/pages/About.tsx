@@ -14,37 +14,39 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Story */}
-      <section className="py-20">
+      {/* Why Truvia Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Left Content */}
             <div>
-              <span className="text-secondary font-semibold uppercase tracking-wider text-sm">
-                Our Story
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
-                Focus on Design & Innovation
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+                <span className="text-foreground">Why </span>
+                <span className="text-primary">TRUVIA?</span>
               </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-secondary font-semibold text-base sm:text-lg mb-4">
+                Quality is at the core of everything we do!
+              </p>
+              <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 We "TRUVIA POLYPLAST" have gained success in the market by manufacturing 
                 and wholesaling a remarkable gamut of P.T.M.T Taps, Plastic Valve, 
                 Plastic & Shower, Connection Pipe & Many More Products. We are an 
                 ISO 9001:2015 certified company.
               </p>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                 Our product range is highly acclaimed in the market for its high durability, 
                 premium quality, excellent performance and longer service life. We ensure 
                 that raw material used in the production process is of superlative quality 
-                and is reliably sourced.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                This outstanding range of products is offered by us at rock bottom prices. 
-                Our commitment to quality and customer satisfaction has made us a trusted 
-                name in the industry.
+                and is reliably sourced. This outstanding range of products is offered by us 
+                at rock bottom prices.
               </p>
             </div>
-            <div className="aspect-video bg-muted rounded-2xl image-placeholder">
-              <p>Image Coming Soon</p>
+
+            {/* Right - Image/Video Placeholder */}
+            <div className="relative">
+              <div className="aspect-video bg-muted rounded-xl sm:rounded-2xl image-placeholder overflow-hidden shadow-lg">
+                <p className="text-sm text-muted-foreground">Video Coming Soon</p>
+              </div>
             </div>
           </div>
         </div>
