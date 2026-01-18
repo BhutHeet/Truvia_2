@@ -12,13 +12,13 @@ const contactCards = [
   {
     icon: Mail,
     title: "Email",
-    content: "info@truviapolyplast.com",
-    link: "mailto:info@truviapolyplast.com",
+    content: "truviapolyplast@gmail.com",
+    link: "mailto:truviapolyplast@gmail.com",
     gradient: "from-secondary to-accent",
   },
   {
     icon: MapPin,
-    title: "Factory Address",
+    title: "Office Address",
     content: "Godown no. 13, Vandemantaram-3, Singarava Road, Opp. VR Estate, Kathwada, Ahmedabad, Gujarat 382430",
     link: null,
     gradient: "from-accent to-primary",
