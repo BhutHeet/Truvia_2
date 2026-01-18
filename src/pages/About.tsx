@@ -21,24 +21,29 @@ const About = () => {
             {/* Left Content */}
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-                <span className="text-foreground">Why </span>
-                <span className="text-primary">TRUVIA?</span>
+                <span className="text-foreground">About </span>
+                <span className="text-primary">TRUVIA</span>
               </h2>
               <p className="text-secondary font-semibold text-base sm:text-lg mb-4">
-                Quality is at the core of everything we do!
+                Premium PTMT Taps & Bath Fittings Manufacturer
               </p>
               <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                We "TRUVIA POLYPLAST" have gained success in the market by manufacturing 
-                and wholesaling a remarkable gamut of P.T.M.T Taps, Plastic Valve, 
-                Plastic & Shower, Connection Pipe & Many More Products. We are an 
-                ISO 9001:2015 certified company.
+                Truvia is a trusted manufacturer and supplier of premium PTMT taps and bath fittings. 
+                Though recently established, our brand is built on strong foundations of quality, 
+                innovation, integrity, and customer satisfaction. We are committed to delivering 
+                world-class products that combine modern design, superior durability, and reliable performance.
+              </p>
+              <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                Each Truvia product is crafted using advanced manufacturing techniques and high-grade 
+                materials to ensure strength, smooth functionality, and an elegant finish. Our focus 
+                is not just on manufacturing fittings, but on enhancing everyday living by providing 
+                confidence, comfort, and style to bathrooms and kitchens.
               </p>
               <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                Our product range is highly acclaimed in the market for its high durability, 
-                premium quality, excellent performance and longer service life. We ensure 
-                that raw material used in the production process is of superlative quality 
-                and is reliably sourced. This outstanding range of products is offered by us 
-                at rock bottom prices.
+                With a growing network of dealers and customers across India, Truvia aims to become 
+                one of the nation's most trusted and preferred bath fittings brands, continuously 
+                setting new benchmarks in the PTMT industry through innovation, transparency, and 
+                sustainable practices.
               </p>
             </div>
 
