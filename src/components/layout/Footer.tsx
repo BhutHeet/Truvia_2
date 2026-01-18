@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import truviaLogo from "@/assets/truvia-logo.png";
 
 const Footer = () => {
   return (
@@ -9,17 +10,18 @@ const Footer = () => {
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center text-primary font-bold text-lg sm:text-xl">
-                TP
-              </div>
+              <img 
+                src={truviaLogo} 
+                alt="Truvia Logo" 
+                className="h-14 w-auto object-contain bg-white rounded-lg p-1"
+              />
               <div>
-                <h3 className="text-lg sm:text-xl font-bold">Truvia Polyplast</h3>
-                <p className="text-xs text-primary-foreground/70">Quality You Can Trust</p>
+                <h3 className="text-lg sm:text-xl font-bold">Truvia</h3>
+                <p className="text-xs text-primary-foreground/70">FLOW WITHOUT FAIL</p>
               </div>
             </div>
             <p className="text-primary-foreground/80 text-xs sm:text-sm leading-relaxed">
-              We are an ISO 9001:2015 certified company manufacturing and wholesaling 
-              premium quality P.T.M.T Taps, Plastic Valves, Showers, Connection Pipes & more.
+              "TRUVIA POLYPLAST" have gained success in the market by manufacturing and wholesaling a remarkable gamut of P.T.M.T Taps, Plastic Valve, Plastic & Shower, Connection Pipe & Many More Products.
             </p>
           </div>
 
@@ -90,30 +92,14 @@ const Footer = () => {
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                 +91-6353329493
               </a>
-              <a href="mailto:info@truviapolyplast.com" className="flex items-center gap-2 sm:gap-3 text-primary-foreground/80 hover:text-white transition-colors text-sm break-all">
+              <a href="mailto:truviapolyplast@gmail.com" className="flex items-center gap-2 sm:gap-3 text-primary-foreground/80 hover:text-white transition-colors text-sm break-all">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                info@truviapolyplast.com
+                truviapolyplast@gmail.com
               </a>
               <div className="flex items-start gap-2 sm:gap-3 text-primary-foreground/80 text-sm">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5" />
-                <span>Gujarat, India</span>
+                <span>Ahmedabad, Gujarat, India</span>
               </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
-              <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
-              </a>
-              <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
-              </a>
-              <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
-              </a>
-              <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
-              </a>
             </div>
           </div>
         </div>

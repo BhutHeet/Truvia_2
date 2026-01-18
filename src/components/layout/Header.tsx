@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import truviaLogo from "@/assets/truvia-logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -21,12 +22,14 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
-              TP
-            </div>
+            <img 
+              src={truviaLogo} 
+              alt="Truvia Logo" 
+              className="h-14 w-auto object-contain"
+            />
             <div>
-              <h1 className="text-xl font-bold text-primary">Truvia Polyplast</h1>
-              <p className="text-xs text-muted-foreground">Quality You Can Trust</p>
+              <h1 className="text-xl font-bold text-primary">Truvia</h1>
+              <p className="text-xs text-muted-foreground">FLOW WITHOUT FAIL</p>
             </div>
           </Link>
 
