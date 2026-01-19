@@ -10,8 +10,18 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="group bg-background rounded-lg sm:rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border">
       {/* Image */}
-      <div className="aspect-square bg-muted image-placeholder">
-        <p className="text-xs sm:text-sm">Image Coming Soon</p>
+      <div className="aspect-square bg-muted overflow-hidden">
+        {product.image ? (
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center image-placeholder">
+            <p className="text-xs sm:text-sm text-muted-foreground">Image Coming Soon</p>
+          </div>
+        )}
       </div>
 
       {/* Content */}
