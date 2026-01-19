@@ -25,11 +25,11 @@ const Header = () => {
             <img 
               src={truviaLogo} 
               alt="Truvia Logo" 
-              className="h-16 sm:h-20 w-auto object-contain"
+              className="h-20 sm:h-24 md:h-28 w-auto object-contain"
             />
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-primary">Truvia</h1>
-              <p className="text-xs text-muted-foreground">FLOW WITHOUT FAIL</p>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">Truvia</h1>
+              <p className="text-xs sm:text-sm text-muted-foreground">FLOW WITHOUT FAIL</p>
             </div>
           </Link>
 

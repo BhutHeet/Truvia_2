@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
-import truviaLogo from "@/assets/truvia-logo.png";
+import { Phone, Mail, MapPin, Droplets } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,11 +9,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src={truviaLogo} 
-                alt="Truvia Logo" 
-                className="h-14 w-auto object-contain bg-white rounded-lg p-1"
-              />
+              <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
+                <Droplets className="w-7 h-7 text-secondary-foreground" />
+              </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-bold">Truvia Polyplast</h3>
                 <p className="text-xs text-primary-foreground/70">FLOW WITHOUT FAIL</p>
