@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import truviaLogo from "@/assets/truvia-logo.png";
 
 const Footer = () => {
   return (
@@ -9,17 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <img 
-                src={truviaLogo} 
-                alt="Truvia Logo" 
-                className="h-14 w-auto object-contain bg-white rounded-lg p-1"
-              />
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold">Truvia</h3>
-                <p className="text-xs text-primary-foreground/70">FLOW WITHOUT FAIL</p>
-              </div>
-            </div>
+            <h3 className="text-lg sm:text-xl font-bold mb-2">Truvia Polyplast</h3>
+            <p className="text-xs text-primary-foreground/70 mb-3">FLOW WITHOUT FAIL</p>
             <p className="text-primary-foreground/80 text-xs sm:text-sm leading-relaxed">
               "TRUVIA POLYPLAST" have gained success in the market by manufacturing and wholesaling a remarkable gamut of P.T.M.T Taps, Plastic Valve, Plastic & Shower, Connection Pipe & Many More Products.
             </p>
