@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Droplets } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
-                <Droplets className="w-7 h-7 text-secondary-foreground" />
+                <span className="text-xl font-bold text-secondary-foreground">TP</span>
               </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-bold">Truvia Polyplast</h3>
