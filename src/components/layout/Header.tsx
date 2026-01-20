@@ -24,7 +24,7 @@ const Header = () => {
             <img 
               src="/assets/truvia-logo.png" 
               alt="Truvia Logo" 
-              className="h-16 sm:h-20 md:h-24 w-auto object-contain -my-2"
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain"
             />
             <div>
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">Truvia</h1>
