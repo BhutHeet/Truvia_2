@@ -17,14 +17,14 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-background shadow-sm">
       {/* Main Navigation */}
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img 
               src="/assets/truvia-logo.png" 
               alt="Truvia Logo" 
-              className="h-20 sm:h-24 md:h-28 w-auto object-contain"
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain -my-2"
             />
             <div>
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">Truvia</h1>
