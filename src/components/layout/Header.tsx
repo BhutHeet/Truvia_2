@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import truviaLogo from "@/assets/truvia-logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -23,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img 
-              src={truviaLogo} 
+              src="/assets/truvia-logo.png" 
               alt="Truvia Logo" 
               className="h-20 sm:h-24 md:h-28 w-auto object-contain"
             />
