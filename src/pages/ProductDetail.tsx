@@ -63,8 +63,18 @@ const ProductDetail = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Product Image */}
-            <div className="aspect-square bg-muted rounded-2xl image-placeholder">
-              <p>Image Coming Soon</p>
+            <div className="aspect-square bg-muted rounded-2xl overflow-hidden">
+              {product.image ? (
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-contain p-8"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center image-placeholder">
+                  <p className="text-muted-foreground">Image Coming Soon</p>
+                </div>
+              )}
             </div>
 
             {/* Product Info */}
