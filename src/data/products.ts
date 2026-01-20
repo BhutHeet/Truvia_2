@@ -305,7 +305,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Compact and stylish short body bib cock with integrated wall flange for easy installation.",
             features: ["15MM Rising Spindle", "Drop Warranty", "0% Drop", "Premium Finish"],
-            image: "/src/assets/products/hexa/short-body.png",
+            image: "/assets/products/hexa/short-body.png",
           },
           {
             id: "HEX-1002",
@@ -314,7 +314,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Extended body bib cock perfect for filling buckets and large containers.",
             features: ["15MM Rising Spindle", "Drop Warranty", "Extended Reach", "High Flow Rate"],
-            image: "/src/assets/products/hexa/long-body-bib-cock.png",
+            image: "/assets/products/hexa/long-body-bib-cock.png",
           },
           {
             id: "HEX-1003",
@@ -323,7 +323,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Short body bib cock with foam flow design for maximum water output.",
             features: ["Foam Flow Design", "Drop Warranty", "Compact Design", "Drip-Free"],
-            image: "/src/assets/products/hexa/short-body-foam-flow.png",
+            image: "/assets/products/hexa/short-body-foam-flow.png",
           },
           {
             id: "HEX-1004",
@@ -332,7 +332,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Long body bib cock with foam flow for high water volume needs.",
             features: ["Foam Flow Design", "Extended Reach", "Drop Warranty", "High Performance"],
-            image: "/src/assets/products/hexa/long-body-foam-flow.png",
+            image: "/assets/products/hexa/long-body-foam-flow.png",
           },
           {
             id: "HEX-1005",
@@ -341,7 +341,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "High-quality angle cock for connecting water supply to fixtures.",
             features: ["90-Degree Angle", "Wall Flange Included", "High Flow Rate", "Durable Construction"],
-            image: "/src/assets/products/hexa/angle-cock.png",
+            image: "/assets/products/hexa/angle-cock.png",
           },
           {
             id: "HEX-1006",
@@ -350,7 +350,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Specialized cock designed for washing machine water supply connections.",
             features: ["Washing Machine Compatible", "High Flow Rate", "Easy Connect", "Drop Warranty"],
-            image: "/src/assets/products/hexa/washing-machine-cock.png",
+            image: "/assets/products/hexa/washing-machine-cock.png",
           },
           {
             id: "HEX-1007",
@@ -359,7 +359,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Nozzle cock with controlled water flow for precise applications.",
             features: ["Precise Control", "Durable Nozzle", "Drop Warranty", "Easy Install"],
-            image: "/src/assets/products/hexa/nozzle-cock.png",
+            image: "/assets/products/hexa/nozzle-cock.png",
           },
           {
             id: "HEX-1008",
@@ -368,7 +368,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Elegant pillar cock designed for wash basins with smooth water flow.",
             features: ["Basin Mounted", "Premium Finish", "Smooth Operation", "Long Lasting"],
-            image: "/src/assets/products/hexa/pillar-cock.png",
+            image: "/assets/products/hexa/pillar-cock.png",
           },
           {
             id: "HEX-1009",
@@ -377,7 +377,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Swivel spout sink cock designed for kitchen use with 360-degree rotation.",
             features: ["Swivel Spout", "360° Rotation", "Kitchen Optimized", "Easy Cleaning"],
-            image: "/src/assets/products/hexa/sink-cock.png",
+            image: "/assets/products/hexa/sink-cock.png",
           },
           {
             id: "HEX-1010",
@@ -386,7 +386,7 @@ export const categories: Category[] = [
             seriesSlug: "hexa-series",
             description: "Graceful swan neck faucet adding elegance to your wash basin.",
             features: ["Elegant Design", "High Arc", "360° Rotation", "Premium Finish"],
-            image: "/src/assets/products/hexa/swan-neck.png",
+            image: "/assets/products/hexa/swan-neck.png",
           },
           {
             id: "HEX-1011",

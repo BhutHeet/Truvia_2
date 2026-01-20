@@ -1,37 +1,29 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-// Import icons from Truvia website
-import dripIcon from "@/assets/icons/drip.png";
-import scratchIcon from "@/assets/icons/scratch-res.png";
-import rustIcon from "@/assets/icons/rust.png";
-import longLifeIcon from "@/assets/icons/long-life.png";
-import temperatureIcon from "@/assets/icons/temperature.png";
-import lessMainIcon from "@/assets/icons/less-main.png";
-
 const features = [
   {
-    icon: dripIcon,
+    icon: "/assets/icons/drip.png",
     title: "Drip Free",
   },
   {
-    icon: scratchIcon,
+    icon: "/assets/icons/scratch-res.png",
     title: "Scratch Resistant",
   },
   {
-    icon: rustIcon,
+    icon: "/assets/icons/rust.png",
     title: "Rust Free",
   },
   {
-    icon: longLifeIcon,
+    icon: "/assets/icons/long-life.png",
     title: "Long Life",
   },
   {
-    icon: temperatureIcon,
+    icon: "/assets/icons/temperature.png",
     title: "Temperature Friendly",
   },
   {
-    icon: lessMainIcon,
+    icon: "/assets/icons/less-main.png",
     title: "Less Maintenance",
   },
 ];
