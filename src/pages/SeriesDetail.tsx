@@ -52,8 +52,8 @@ const SeriesDetail = () => {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4">
                 {series.name.split(" ")[0]}
               </h1>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-secondary">
-                {series.name.split(" ").slice(1).join(" ")}
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-white">
+                Connection
               </h2>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 italic">
                 {series.description}

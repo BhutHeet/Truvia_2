@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img 
-              src="/assets/truvia-logo.png" 
+              src="/assets/truvia-logo-large.png" 
               alt="Truvia Logo" 
               className="h-16 sm:h-20 md:h-24 w-auto object-contain -my-2"
             />
