@@ -28,96 +28,96 @@ export interface Category {
 // Image path helpers for different series
 const getAuraImage = (productName: string): string | undefined => {
   const imageMap: Record<string, string> = {
-    "Short Body Bib Cock": "/assets/products/Aura Series/Short body bib cock.jpg",
-    "Long Body Bib Cock": "/assets/products/Aura Series/Long body bib cock.jpg",
-    "Short Body F/F Bib Cock": "/assets/products/Aura Series/Short body foam flow.jpg",
-    "Long Body F/F Bib Cock": "/assets/products/Aura Series/Long Body foam flow.png",
-    "Angle Cock": "/assets/products/Aura Series/Angle cock.jpg",
-    "Washing Machine Cock": "/assets/products/Aura Series/Washing machine cock.png",
-    "Nozzle Cock": "/assets/products/Aura Series/Nozzle cock.jpg",
-    "Pillar Cock": "/assets/products/Aura Series/Pillar cock.jpg",
-    "Sink Cock": "/assets/products/Aura Series/Sink cock.png",
-    "Swan Neck": "/assets/products/Aura Series/Swan neck.png",
-    "2-Way Bib Cock": "/assets/products/Aura Series/2 way bib cock.jpg",
-    "2-Way Angle Cock": "/assets/products/Aura Series/2 way angle cock.jpg",
+    "Short Body Bib Cock": "/assets/products/Aura%20Series/Short%20body%20bib%20cock.jpg",
+    "Long Body Bib Cock": "/assets/products/Aura%20Series/Long%20body%20bib%20cock.jpg",
+    "Short Body F/F Bib Cock": "/assets/products/Aura%20Series/Short%20body%20foam%20flow.jpg",
+    "Long Body F/F Bib Cock": "/assets/products/Aura%20Series/Long%20Body%20foam%20flow.png",
+    "Angle Cock": "/assets/products/Aura%20Series/Angle%20cock.jpg",
+    "Washing Machine Cock": "/assets/products/Aura%20Series/Washing%20machine%20cock.png",
+    "Nozzle Cock": "/assets/products/Aura%20Series/Nozzle%20cock.jpg",
+    "Pillar Cock": "/assets/products/Aura%20Series/Pillar%20cock.jpg",
+    "Sink Cock": "/assets/products/Aura%20Series/Sink%20cock.png",
+    "Swan Neck": "/assets/products/Aura%20Series/Swan%20neck.png",
+    "2-Way Bib Cock": "/assets/products/Aura%20Series/2%20way%20bib%20cock.jpg",
+    "2-Way Angle Cock": "/assets/products/Aura%20Series/2%20way%20angle%20cock.jpg",
   };
   return imageMap[productName];
 };
 
 const getFusionImage = (productName: string): string | undefined => {
   const imageMap: Record<string, string> = {
-    "Short Body Bib Cock": "/assets/products/Fusion Series/Short body bib cock.jpg",
-    "Long Body Bib Cock": "/assets/products/Fusion Series/Long body bib cock.jpg",
-    "Short Body F/F Bib Cock": "/assets/products/Fusion Series/Short body foam flow.png",
-    "Long Body F/F Bib Cock": "/assets/products/Fusion Series/long body foam flow.jpg",
-    "Angle Cock": "/assets/products/Fusion Series/Angle cock.jpg",
-    "Washing Machine Cock": "/assets/products/Fusion Series/Washing machine cock.jpg",
-    "Nozzle Cock": "/assets/products/Fusion Series/Nozzle cock.jpg",
-    "Pillar Cock": "/assets/products/Fusion Series/Pillar cock.jpg",
-    "Sink Cock": "/assets/products/Fusion Series/Sink cock.jpg",
-    "Swan Neck": "/assets/products/Fusion Series/Swan neck.png",
-    "2-Way Bib Cock": "/assets/products/Fusion Series/2-way bib cock.jpg",
-    "2-Way Angle Cock": "/assets/products/Fusion Series/2-way angle cock.jpg",
+    "Short Body Bib Cock": "/assets/products/Fusion%20Series/Short%20body%20bib%20cock.jpg",
+    "Long Body Bib Cock": "/assets/products/Fusion%20Series/Long%20body%20bib%20cock.jpg",
+    "Short Body F/F Bib Cock": "/assets/products/Fusion%20Series/Short%20body%20foam%20flow.png",
+    "Long Body F/F Bib Cock": "/assets/products/Fusion%20Series/long%20body%20foam%20flow.jpg",
+    "Angle Cock": "/assets/products/Fusion%20Series/Angle%20cock.jpg",
+    "Washing Machine Cock": "/assets/products/Fusion%20Series/Washing%20machine%20cock.jpg",
+    "Nozzle Cock": "/assets/products/Fusion%20Series/Nozzle%20cock.jpg",
+    "Pillar Cock": "/assets/products/Fusion%20Series/Pillar%20cock.jpg",
+    "Sink Cock": "/assets/products/Fusion%20Series/Sink%20cock.jpg",
+    "Swan Neck": "/assets/products/Fusion%20Series/Swan%20neck.png",
+    "2-Way Bib Cock": "/assets/products/Fusion%20Series/2-way%20bib%20cock.jpg",
+    "2-Way Angle Cock": "/assets/products/Fusion%20Series/2-way%20angle%20cock.jpg",
   };
   return imageMap[productName];
 };
 
 const getCharcoalImage = (productName: string): string | undefined => {
   const imageMap: Record<string, string> = {
-    "Short Body Bib Cock": "/assets/products/Charcoal Series/Short body bib cock.jpg",
-    "Long Body Bib Cock": "/assets/products/Charcoal Series/Long body.jpg",
-    "Short Body F/F Bib Cock": "/assets/products/Charcoal Series/Short body foam flow.jpg",
-    "Long Body F/F Bib Cock": "/assets/products/Charcoal Series/Long body foam flow.jpg",
-    "Angle Cock": "/assets/products/Charcoal Series/Angle cock.jpg",
-    "Washing Machine Cock": "/assets/products/Charcoal Series/Washing machine cock.jpg",
-    "Nozzle Cock": "/assets/products/Charcoal Series/Nozzel cock.jpg",
-    "Pillar Cock": "/assets/products/Charcoal Series/Pillar cock.jpg",
-    "Sink Cock": "/assets/products/Charcoal Series/Sink cock.jpg",
-    "Swan Neck": "/assets/products/Charcoal Series/Swan neck.png",
-    "2-Way Bib Cock": "/assets/products/Charcoal Series/2 way bib cock.jpg",
-    "2-Way Angle Cock": "/assets/products/Charcoal Series/2 way angle cock.jpg",
+    "Short Body Bib Cock": "/assets/products/Charcoal%20Series/Short%20body%20bib%20cock.jpg",
+    "Long Body Bib Cock": "/assets/products/Charcoal%20Series/Long%20body.jpg",
+    "Short Body F/F Bib Cock": "/assets/products/Charcoal%20Series/Short%20body%20foam%20flow.jpg",
+    "Long Body F/F Bib Cock": "/assets/products/Charcoal%20Series/Long%20body%20foam%20flow.jpg",
+    "Angle Cock": "/assets/products/Charcoal%20Series/Angle%20cock.jpg",
+    "Washing Machine Cock": "/assets/products/Charcoal%20Series/Washing%20machine%20cock.jpg",
+    "Nozzle Cock": "/assets/products/Charcoal%20Series/Nozzel%20cock.jpg",
+    "Pillar Cock": "/assets/products/Charcoal%20Series/Pillar%20cock.jpg",
+    "Sink Cock": "/assets/products/Charcoal%20Series/Sink%20cock.jpg",
+    "Swan Neck": "/assets/products/Charcoal%20Series/Swan%20neck.png",
+    "2-Way Bib Cock": "/assets/products/Charcoal%20Series/2%20way%20bib%20cock.jpg",
+    "2-Way Angle Cock": "/assets/products/Charcoal%20Series/2%20way%20angle%20cock.jpg",
   };
   return imageMap[productName];
 };
 
 const getRoyalImage = (productName: string): string | undefined => {
   const imageMap: Record<string, string> = {
-    "Short Body Bib Cock": "/assets/products/Royal Series/Short body bib cock.jpg",
-    "Long Body Bib Cock": "/assets/products/Royal Series/Long body bib cock.jpg",
-    "Short Body F/F Bib Cock": "/assets/products/Royal Series/Short body foam flow.jpg",
-    "Long Body F/F Bib Cock": "/assets/products/Royal Series/Long body foam flow.jpg",
-    "Angle Cock": "/assets/products/Royal Series/angle cock.jpg",
-    "Washing Machine Cock": "/assets/products/Royal Series/Washing machine.png",
-    "Nozzle Cock": "/assets/products/Royal Series/Nozzle cock.jpg",
-    "Pillar Cock": "/assets/products/Royal Series/Pillar cock.jpg",
-    "Sink Cock": "/assets/products/Royal Series/Sink cock.jpg",
-    "Swan Neck": "/assets/products/Royal Series/Swan neck.jpg",
-    "2-Way Bib Cock": "/assets/products/Royal Series/2 way bib cock.jpg",
-    "2-Way Angle Cock": "/assets/products/Royal Series/2 way angle cock.jpg",
+    "Short Body Bib Cock": "/assets/products/Royal%20Series/Short%20body%20bib%20cock.jpg",
+    "Long Body Bib Cock": "/assets/products/Royal%20Series/Long%20body%20bib%20cock.jpg",
+    "Short Body F/F Bib Cock": "/assets/products/Royal%20Series/Short%20body%20foam%20flow.jpg",
+    "Long Body F/F Bib Cock": "/assets/products/Royal%20Series/Long%20body%20foam%20flow.jpg",
+    "Angle Cock": "/assets/products/Royal%20Series/angle%20cock.jpg",
+    "Washing Machine Cock": "/assets/products/Royal%20Series/Washing%20machine.png",
+    "Nozzle Cock": "/assets/products/Royal%20Series/Nozzle%20cock.jpg",
+    "Pillar Cock": "/assets/products/Royal%20Series/Pillar%20cock.jpg",
+    "Sink Cock": "/assets/products/Royal%20Series/Sink%20cock.jpg",
+    "Swan Neck": "/assets/products/Royal%20Series/Swan%20neck.jpg",
+    "2-Way Bib Cock": "/assets/products/Royal%20Series/2%20way%20bib%20cock.jpg",
+    "2-Way Angle Cock": "/assets/products/Royal%20Series/2%20way%20angle%20cock.jpg",
   };
   return imageMap[productName];
 };
 
 const getMarbleImage = (productName: string): string | undefined => {
   const imageMap: Record<string, string> = {
-    "Short Body Bib Cock": "/assets/products/Marble Series/Short body.jpg",
-    "Long Body Bib Cock": "/assets/products/Marble Series/Long body.png",
-    "Angle Cock": "/assets/products/Marble Series/Angle.png",
-    "Pillar Cock": "/assets/products/Marble Series/Pillar cock.png",
-    "Sink Cock": "/assets/products/Marble Series/Sink cock.jpg",
-    "Swan Cock": "/assets/products/Marble Series/Swan neck.png",
-    "2-Way Bib Cock": "/assets/products/Marble Series/2-way bib cock.jpg",
-    "2-Way Angle Cock": "/assets/products/Marble Series/2-way angle cock.jpg",
-    "Wall Mixture": "/assets/products/Marble Series/Wall-mixture.jpg",
+    "Short Body Bib Cock": "/assets/products/Marble%20Series/Short%20body.jpg",
+    "Long Body Bib Cock": "/assets/products/Marble%20Series/Long%20body.png",
+    "Angle Cock": "/assets/products/Marble%20Series/Angle.png",
+    "Pillar Cock": "/assets/products/Marble%20Series/Pillar%20cock.png",
+    "Sink Cock": "/assets/products/Marble%20Series/Sink%20cock.jpg",
+    "Swan Cock": "/assets/products/Marble%20Series/Swan%20neck.png",
+    "2-Way Bib Cock": "/assets/products/Marble%20Series/2-way%20bib%20cock.jpg",
+    "2-Way Angle Cock": "/assets/products/Marble%20Series/2-way%20angle%20cock.jpg",
+    "Wall Mixture": "/assets/products/Marble%20Series/Wall-mixture.jpg",
   };
   return imageMap[productName];
 };
 
 const getTHeadImage = (productName: string): string | undefined => {
   const imageMap: Record<string, string> = {
-    "Short Body Bib Cock 90°": "/assets/products/T-Head/Short body bib cock.jpg",
-    "Long Body Bib Cock": "/assets/products/T-Head/Long body bib cock.jpg",
-    "Angle Cock": "/assets/products/T-Head/Angel cock.jpg",
+    "Short Body Bib Cock 90°": "/assets/products/T-Head/Short%20body%20bib%20cock.jpg",
+    "Long Body Bib Cock": "/assets/products/T-Head/Long%20body%20bib%20cock.jpg",
+    "Angle Cock": "/assets/products/T-Head/Angel%20cock.jpg",
   };
   return imageMap[productName];
 };
@@ -134,8 +134,8 @@ const getHexaImage = (productName: string): string | undefined => {
     "Pillar Cock": "/assets/products/hexa/pillar-cock.png",
     "Sink Cock": "/assets/products/hexa/sink-cock.png",
     "Swan Neck": "/assets/products/hexa/swan-neck.png",
-    "2-Way Bib Cock": "/assets/products/hexa/2 way bib cock.png",
-    "2-Way Angle Cock": "/assets/products/hexa/2 way angle cock.png",
+    "2-Way Bib Cock": "/assets/products/hexa/2%20way%20bib%20cock.png",
+    "2-Way Angle Cock": "/assets/products/hexa/2%20way%20angle%20cock.png",
   };
   return imageMap[productName];
 };
@@ -596,7 +596,7 @@ export const categories: Category[] = [
             seriesSlug: "health-faucet",
             description: "Complete health faucet set with 1 meter flexible hose",
             features: ["1 Meter Hose", "ABS Body", "Easy Grip", "Leak-Proof"],
-            image: "/assets/products/Other Products/Health faucet.png",
+            image: "/assets/products/Other%20Products/Health%20faucet.png",
           },
           {
             id: "HF2-001",
@@ -605,7 +605,7 @@ export const categories: Category[] = [
             seriesSlug: "health-faucet",
             description: "Complete health faucet set with 2 meter flexible hose for extended reach",
             features: ["2 Meter Hose", "ABS Body", "Easy Grip", "Leak-Proof"],
-            image: "/assets/products/Other Products/Health Faucet 2.png",
+            image: "/assets/products/Other%20Products/Health%20Faucet%202.png",
           },
         ],
       },
@@ -624,7 +624,7 @@ export const categories: Category[] = [
             seriesSlug: "abs-shower",
             description: "High-quality 4X4 ABS shower head for refreshing bathing experience",
             features: ["4X4 Size", "ABS Construction", "Multiple Spray", "Easy Clean"],
-            image: "/assets/products/Other Products/Shower.png",
+            image: "/assets/products/Other%20Products/Shower.png",
           },
         ],
       },
@@ -650,7 +650,7 @@ export const categories: Category[] = [
             seriesSlug: "waste-pipe",
             description: "High-quality 36mm waste pipe for bathroom drainage",
             features: ["36mm Diameter", "Durable PVC", "Easy Install", "Leak-Proof"],
-            image: "/assets/products/Other Products/Waste pipe.jpg",
+            image: "/assets/products/Other%20Products/Waste%20pipe.jpg",
           },
           {
             id: "WP42-001",
@@ -659,7 +659,7 @@ export const categories: Category[] = [
             seriesSlug: "waste-pipe",
             description: "High-quality 42mm waste pipe for kitchen and bathroom drainage",
             features: ["42mm Diameter", "Heavy Duty", "Durable PVC", "Easy Connect"],
-            image: "/assets/products/Other Products/Waste pipe.jpg",
+            image: "/assets/products/Other%20Products/Waste%20pipe.jpg",
           },
         ],
       },
@@ -678,7 +678,7 @@ export const categories: Category[] = [
             seriesSlug: "connection-pipe",
             description: "Flexible 18 inch connection pipe with brass fittings",
             features: ["18 Inch Length", "Flexible Design", "Brass Fittings", "Leak-Proof"],
-            image: "/assets/products/Other Products/Connection pipe.jpg",
+            image: "/assets/products/Other%20Products/Connection%20pipe.jpg",
           },
           {
             id: "CP24-001",
@@ -687,7 +687,7 @@ export const categories: Category[] = [
             seriesSlug: "connection-pipe",
             description: "Flexible 24 inch connection pipe with brass fittings",
             features: ["24 Inch Length", "Flexible Design", "Brass Fittings", "Leak-Proof"],
-            image: "/assets/products/Other Products/Connection pipe.jpg",
+            image: "/assets/products/Other%20Products/Connection%20pipe.jpg",
           },
           {
             id: "CP30-001",
@@ -696,7 +696,7 @@ export const categories: Category[] = [
             seriesSlug: "connection-pipe",
             description: "Flexible 30 inch connection pipe with brass fittings",
             features: ["30 Inch Length", "Flexible Design", "Brass Fittings", "Leak-Proof"],
-            image: "/assets/products/Other Products/Connection pipe.jpg",
+            image: "/assets/products/Other%20Products/Connection%20pipe.jpg",
           },
           {
             id: "CP36-001",
@@ -705,7 +705,7 @@ export const categories: Category[] = [
             seriesSlug: "connection-pipe",
             description: "Flexible 36 inch connection pipe with brass fittings",
             features: ["36 Inch Length", "Flexible Design", "Brass Fittings", "Leak-Proof"],
-            image: "/assets/products/Other Products/Connection pipe.jpg",
+            image: "/assets/products/Other%20Products/Connection%20pipe.jpg",
           },
           {
             id: "CP1M-001",
@@ -714,7 +714,7 @@ export const categories: Category[] = [
             seriesSlug: "connection-pipe",
             description: "Flexible 1 meter connection pipe with brass fittings",
             features: ["1 Meter Length", "Flexible Design", "Brass Fittings", "Heavy Duty"],
-            image: "/assets/products/Other Products/Connection pipe.jpg",
+            image: "/assets/products/Other%20Products/Connection%20pipe.jpg",
           },
           {
             id: "CP15M-001",
@@ -723,7 +723,7 @@ export const categories: Category[] = [
             seriesSlug: "connection-pipe",
             description: "Flexible 1.5 meter connection pipe with brass fittings",
             features: ["1.5 Meter Length", "Flexible Design", "Brass Fittings", "Heavy Duty"],
-            image: "/assets/products/Other Products/Connection pipe.jpg",
+            image: "/assets/products/Other%20Products/Connection%20pipe.jpg",
           },
         ],
       },
@@ -742,7 +742,7 @@ export const categories: Category[] = [
             seriesSlug: "ball-cock",
             description: "High-quality 1/2 inch ball cock for water control",
             features: ["1/2 Inch Size", "Heavy Duty", "High Pressure", "Durable"],
-            image: "/assets/products/Other Products/PTMT BALL COCK.png",
+            image: "/assets/products/Other%20Products/PTMT%20BALL%20COCK.png",
           },
           {
             id: "BC34-001",
@@ -751,7 +751,7 @@ export const categories: Category[] = [
             seriesSlug: "ball-cock",
             description: "High-quality 3/4 inch ball cock for water control",
             features: ["3/4 Inch Size", "Full Bore", "High Flow", "Durable"],
-            image: "/assets/products/Other Products/PTMT BALL COCK.png",
+            image: "/assets/products/Other%20Products/PTMT%20BALL%20COCK.png",
           },
           {
             id: "BC1-001",
@@ -760,7 +760,7 @@ export const categories: Category[] = [
             seriesSlug: "ball-cock",
             description: "High-quality 1 inch ball cock for high flow water control",
             features: ["1 Inch Size", "Full Bore", "Maximum Flow", "Industrial Grade"],
-            image: "/assets/products/Other Products/PTMT BALL COCK.png",
+            image: "/assets/products/Other%20Products/PTMT%20BALL%20COCK.png",
           },
         ],
       },
